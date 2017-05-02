@@ -1,5 +1,5 @@
 const readline = require('readline');
-const testString  =require('./string');
+const testString  = require('./string');
 
 
 function getString(){
@@ -12,9 +12,20 @@ function getString(){
         let passesAllChecks = true;
 
         //Conditional Statements here.
+        if(testString.hasUpper()==false){
+          passesAllChecks = false;
+        }
+        else if (testString.hasLower()==false) {
+          passesAllChecks = false;
+        }
+        else if (testString.hasNumerical()==false) {
+          passesAllChecks = false;
+        }
+        else if (testString.hasSpecial()==false) {
+          passesAllchecks = false;
+        }
 
-
-        if(!passesAllChecks){
+        if(passesAllChecks==false){
             console.log("\nTry again\n");
             password.close();
             getString();

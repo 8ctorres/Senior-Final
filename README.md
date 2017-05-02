@@ -5,7 +5,7 @@ This project completes the password checking password program that we saw in cla
 
 ## string.js
 
-You have 6 functions to completes.
+You have 6 functions to complete.
 -  PasswordMessage()
 -  inRange()
 -  exports.containsUpper = function()
