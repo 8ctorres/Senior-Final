@@ -10,18 +10,21 @@ function getString(){
 
     password.question("What would you like to set as your password?", function(str){
         let passesAllChecks = true;
-
+        console.log("Cheking password...")
         //Conditional Statements here.
-        if(testString.hasUpper()==false){
+        if(testString.checkLength(str)==false){
           passesAllChecks = false;
         }
-        else if (testString.hasLower()==false) {
+        if(testString.containsUpper(str)==false){
           passesAllChecks = false;
         }
-        else if (testString.hasNumerical()==false) {
+        if (testString.containsLower(str)==false) {
           passesAllChecks = false;
         }
-        else if (testString.hasSpecial()==false) {
+        if (testString.containsNumerical(str)==false) {
+          passesAllChecks = false;
+        }
+        if (testString.containsSpecial(str)==false) {
           passesAllchecks = false;
         }
 

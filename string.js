@@ -10,7 +10,7 @@ function inRange(char,min,max){
     if(unicode<min){
       return false;
     }
-    else if(unicode[i]>max){
+    else if(unicode>max){
       return false;
     }
     else{
@@ -19,6 +19,7 @@ function inRange(char,min,max){
 }
 
 exports.checkLength = function(str){
+  console.log("Checking length...")
     let valid = (str.length >= 8 && str.length <= 20);
     try{
         if(str.length < 8){
@@ -37,7 +38,6 @@ exports.checkLength = function(str){
     }
 }
 
-
 exports.containsUpper =function(str){
 let hasUpper = false;
 
@@ -55,7 +55,7 @@ try{
  }
 
  catch(e){
-   console.log(e.message);
+   console.log(e.name+": "+e.message);
    return hasUpper;
  }
 
@@ -79,7 +79,7 @@ exports.containsLower =function(str){
    }
 
    catch(e){
-     console.log(e.message);
+     console.log(e.name+": "+e.message);
      return hasLower;
    }
 
@@ -103,7 +103,7 @@ exports.containsNumerical =function(str){
    }
 
    catch(e){
-     console.log(e.message);
+     console.log(e.name+": "+e.message);
      return hasNumerical;
    }
 
@@ -127,7 +127,7 @@ exports.containsSpecial =function(str){
    }
 
    catch(e){
-     console.log(e.message);
+     console.log(e.name+": "+e.message);
      return hasSpecial;
    }
 
