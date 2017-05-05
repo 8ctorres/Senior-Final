@@ -1,19 +1,19 @@
 var exports = module.exports = {};
 
 function PasswordMessage(m){
-this.name = "Password Message"
-this.message = m
+this.name = "Password Message";
+this.message = m;
 }
 
 function inRange(char,min,max){
   console.log("running function inRange with char= "+char+" , min= "+min+" , and max= "+max)
 
     let unicode = char.charCodeAt(0);
-    if(unicode<min){
+    if(unicode<=min){
       console.log("f inrange returns FALSE")
       return false;
     }
-    else if(unicode>max){
+    else if(unicode>=max){
       console.log("f inrange returns FALSE")
       return false;
     }
@@ -51,7 +51,7 @@ let hasUpper = false;
 
 try{
   for (let i = 0; i < str.length; i++){
-    if(inRange(str[i],65,90)==true){
+    if(inRange(str[i],65,90)){
       hasUpper = true;
       throw new PasswordMessage("Has uppercase");
     }
@@ -129,8 +129,8 @@ exports.containsSpecial =function(str){
   let special = [33,64,35,36,37,94,38,42];
   try{
     for (let i = 0; i < str.length; i++){
-      for (let i = 0; i < special.length; i++) {
-        if(inRange(str[i],special[0],special[0])==true){
+      for (let j = 0; j < special.length; j++) {
+        if( str[i].charCodeAt(0) == special[j]){
           hasSpecial = true;
           throw new PasswordMessage("Has a special character");
         }
