@@ -10,8 +10,7 @@ function getString(){
 
     password.question("What would you like to set as your password?", function(str){
         let passesAllChecks = true;
-        console.log("")
-        console.log("Cheking password...")
+        console.log("\nChecking password...\n")
         //Conditional Statements here.
         if(testString.checkLength(str)==false){
           passesAllChecks = false;
@@ -30,13 +29,11 @@ function getString(){
         }
 
         if(passesAllChecks==false){
-            console.log("")
             console.log("\nYour password doesn't work. Try again\n");
             password.close();
             getString();
         }
         else{
-              console.log("")
             console.log("\nGreat password. Bye bye now...\n");
             password.close();
         }

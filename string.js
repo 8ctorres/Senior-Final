@@ -93,7 +93,7 @@ exports.containsNumerical =function(str){
     for (let i = 0; i < str.length; i++){
       if(inRange(str[i],48,57)==true){
         hasNumerical = true;
-        throw new PasswordMessage("Your password has at least a number");
+        throw new PasswordMessage("Your password has at least one number");
       }
     }
 
@@ -118,13 +118,13 @@ exports.containsSpecial =function(str){
       for (let j = 0; j < special.length; j++) {
         if( str[i].charCodeAt(0) == special[j]){
           hasSpecial = true;
-          throw new PasswordMessage("Has a special character");
+          throw new PasswordMessage("Your password has at least one special character");
         }
       }
     }
 
     if(hasSpecial==false){
-      throw new PasswordMessage("Does not have any special characters");
+      throw new PasswordMessage("Your password does not have any special characters");
     }
    }
 
