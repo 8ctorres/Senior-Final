@@ -25,7 +25,7 @@ function getString(){
           passesAllChecks = false;
         }
         if (testString.containsSpecial(str)==false) {
-          passesAllchecks = false;
+          passesAllChecks = false;
         }
 
         if(passesAllChecks==false){
