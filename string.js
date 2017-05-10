@@ -6,27 +6,21 @@ this.message = m;
 }
 
 function inRange(char,min,max){
-  console.log("running function inRange with char= "+char+" , min= "+min+" , and max= "+max)
 
     let unicode = char.charCodeAt(0);
     if(unicode<=min){
-      console.log("f inrange returns FALSE")
       return false;
     }
     else if(unicode>=max){
-      console.log("f inrange returns FALSE")
       return false;
     }
     else{
-      console.log("f inrange returns TRUE")
       return true
     }
 }
 
 exports.checkLength = function(str){
-  console.log("Checking length of... "+str)
     let valid = (str.length >= 8 && str.length <= 20);
-    console.log("checklengt.valid="+valid)
     try{
         if(str.length < 8){
             throw new PasswordMessage("Your password is too short. Should be at least 8 letters.");
@@ -40,31 +34,28 @@ exports.checkLength = function(str){
     }
     catch(e){
         console.log(e.name+": "+e.message);
-        console.log("return valid of f checkLength="+valid)
         return valid;
     }
 }
 
 exports.containsUpper =function(str){
-  console.log("Checking Upper of... "+str)
 let hasUpper = false;
 
 try{
   for (let i = 0; i < str.length; i++){
     if(inRange(str[i],65,90)){
       hasUpper = true;
-      throw new PasswordMessage("Has uppercase");
+      throw new PasswordMessage("Your password has uppercase");
     }
   }
 
   if(hasUpper==false){
-    throw new PasswordMessage("Does not have uppercase");
+    throw new PasswordMessage("Your password does not have uppercase");
   }
  }
 
  catch(e){
    console.log(e.name+": "+e.message);
-   console.log("hasUpper="+hasUpper)
    return hasUpper;
  }
 
@@ -72,25 +63,23 @@ try{
 
 
 exports.containsLower =function(str){
-  console.log("Checking lower of... "+str)
   let hasLower = false;
 
   try{
     for (let i = 0; i < str.length; i++){
       if(inRange(str[i],97,122)==true){
         hasLower = true;
-        throw new PasswordMessage("Has lowercase");
+        throw new PasswordMessage("Your password has lowercase");
       }
     }
 
     if(hasLower==false){
-      throw new PasswordMessage("Does not have lowercase");
+      throw new PasswordMessage("Your password does not have lowercase");
     }
    }
 
    catch(e){
      console.log(e.name+": "+e.message);
-     console.log("hasLower ="+hasLower)
      return hasLower;
    }
 
@@ -98,25 +87,23 @@ exports.containsLower =function(str){
 
 
 exports.containsNumerical =function(str){
-  console.log("Checking numerical of... "+str)
   let hasNumerical = false;
 
   try{
     for (let i = 0; i < str.length; i++){
       if(inRange(str[i],48,57)==true){
         hasNumerical = true;
-        throw new PasswordMessage("Has a number");
+        throw new PasswordMessage("Your password has at least a number");
       }
     }
 
     if(hasNumerical==false){
-      throw new PasswordMessage("Does not have any numbers");
+      throw new PasswordMessage("Your password does not have any numbers");
     }
    }
 
    catch(e){
      console.log(e.name+": "+e.message);
-     console.log("hasNumerical="+hasNumerical)
      return hasNumerical;
    }
 
@@ -124,7 +111,6 @@ exports.containsNumerical =function(str){
 
 
 exports.containsSpecial =function(str){
-  console.log("Checking special of... "+str)
   let hasSpecial = false;
   let special = [33,64,35,36,37,94,38,42];
   try{
@@ -144,7 +130,6 @@ exports.containsSpecial =function(str){
 
    catch(e){
      console.log(e.name+": "+e.message);
-     console.log("hasSpecial="+hasSpecial)
      return hasSpecial;
    }
 
