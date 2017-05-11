@@ -1,0 +1,33 @@
+const readline = require('readline');
+const calc = require('./script.js')
+
+let a = 0;
+let b = 0;
+let c = 0;
+
+function getString(){
+    let quadratic = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+        quadratic.question("What is your 'a' value?", function(str){
+          let a = str;
+
+        });
+        quadratic.question("What is your 'b' value?", function(str){
+          let b = str;
+
+        });
+        quadratic.question("What is your 'c' value?", function(str){
+          let c = str;
+          
+        });
+
+        let x1 = calc.equation1(a,b,c);
+        let x2 = calc.equation2(a,b,c);
+
+        console.log("X equals "+x1+" and "+x2+" .")
+}
+
+getString();
