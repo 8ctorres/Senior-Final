@@ -12,15 +12,15 @@ function getString(){
     });
 
         quadratic.question("What is your 'a' value?", function(str){
-          let a = str;
+          a = str;
 
         });
         quadratic.question("What is your 'b' value?", function(str){
-          let b = str;
+          b = str;
 
         });
         quadratic.question("What is your 'c' value?", function(str){
-          let c = str;
+          c = str;
           
         });
 
