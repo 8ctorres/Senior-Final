@@ -13,7 +13,7 @@ function geta(){
 
         quadratica.question("What is your 'a' value?", function(str){
           a = str;
-          getb();
+
         });
       };
 
@@ -25,7 +25,7 @@ function getb(){
 
               quadraticb.question("What is your 'a' value?", function(str){
                 b = str;
-                getc();
+               
               });
             };
 
@@ -47,3 +47,5 @@ function getc(){
 
 
 geta();
+getb();
+getc();
