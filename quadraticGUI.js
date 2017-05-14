@@ -5,6 +5,11 @@ let a = 0;
 let b = 0;
 let c = 0;
 
+
+a = geta();
+b = getb();
+c = getc();
+
 function geta(){
     let quadratica = readline.createInterface({
         input: process.stdin,
@@ -12,7 +17,7 @@ function geta(){
     });
 
         quadratica.question("What is your 'a' value?", function(str){
-          a = str;
+          return str;
           console.log("function a")
         });
       };
@@ -24,7 +29,7 @@ function getb(){
           });
 
               quadraticb.question("What is your 'a' value?", function(str){
-                b = str;
+                return str;
           console.log("function b")
               });
             };
@@ -36,17 +41,13 @@ function getc(){
           });
 
           quadraticc.question("What is your 'a' value?", function(str){
-            c = str;
+            return str;
                       console.log("function c")
-            let x1 = calc.equation1(a,b,c);
-            let x2 = calc.equation2(a,b,c);
 
-            console.log("X equals "+x1+" and "+x2+" .")
           });
       };
 
+      let x1 = calc.equation1(a,b,c);
+      let x2 = calc.equation2(a,b,c);
 
-
-geta();
-getb();
-getc();
+      console.log("X equals "+x1+" and "+x2+" .");
