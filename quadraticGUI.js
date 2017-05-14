@@ -22,14 +22,10 @@ function getString(){
              let x2 = calc.equation2(a,b,c);
 
              console.log("X equals "+x1+" and "+x2+" .")
-             
+
              });
           });
         });
-
-
-
-
 }
 
 getString();
