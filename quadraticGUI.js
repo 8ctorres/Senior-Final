@@ -5,27 +5,44 @@ let a = 0;
 let b = 0;
 let c = 0;
 
-function getString(){
-    let quadratic = readline.createInterface({
+function geta(){
+    let quadratica = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
-        quadratic.question("What is your 'a' value?", function(str){
+        quadratica.question("What is your 'a' value?", function(str){
           a = str;
-          quadratic.question("What is your 'b' value?", function(str){
-            b = str;
-            quadratic.question("What is your 'c' value?", function(str){
-             c = str;
-
-             let x1 = calc.equation1(a,b,c);
-             let x2 = calc.equation2(a,b,c);
-
-             console.log("X equals "+x1+" and "+x2+" .")
-
-             });
-          });
         });
-}
+      };
 
-getString();
+function getb(){
+          let quadraticb = readline.createInterface({
+              input: process.stdin,
+              output: process.stdout
+          });
+
+              quadraticb.question("What is your 'a' value?", function(str){
+                b = str;
+              });
+            };
+
+function getc(){
+      let quadraticc = readline.createInterface({
+                input: process.stdin,
+                output: process.stdout
+          });
+
+          quadraticc.question("What is your 'a' value?", function(str){
+            c = str;
+          });
+      };
+
+        let x1 = calc.equation1(a,b,c);
+        let x2 = calc.equation2(a,b,c);
+
+        console.log("X equals "+x1+" and "+x2+" .")
+
+geta();
+getb();
+getc();
