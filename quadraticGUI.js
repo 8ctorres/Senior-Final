@@ -53,4 +53,4 @@ function calculate(a,b,c){
 
       console.log("X equals "+x1+" and "+x2+" .");
 }
- 
+ calculate(a,b,c);
