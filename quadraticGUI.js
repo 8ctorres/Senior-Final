@@ -13,6 +13,7 @@ function geta(){
 
         quadratica.question("What is your 'a' value?", function(str){
           a = str;
+          getb();
         });
       };
 
@@ -24,6 +25,7 @@ function getb(){
 
               quadraticb.question("What is your 'a' value?", function(str){
                 b = str;
+                getc();
               });
             };
 
@@ -35,14 +37,13 @@ function getc(){
 
           quadraticc.question("What is your 'a' value?", function(str){
             c = str;
+            let x1 = calc.equation1(a,b,c);
+            let x2 = calc.equation2(a,b,c);
+
+            console.log("X equals "+x1+" and "+x2+" .")
           });
       };
 
-        let x1 = calc.equation1(a,b,c);
-        let x2 = calc.equation2(a,b,c);
 
-        console.log("X equals "+x1+" and "+x2+" .")
 
 geta();
-getb();
-getc();
