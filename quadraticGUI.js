@@ -47,7 +47,10 @@ function getc(){
           });
       };
 
+function calculate(a,b,c){
       let x1 = calc.equation1(a,b,c);
       let x2 = calc.equation2(a,b,c);
 
       console.log("X equals "+x1+" and "+x2+" .");
+}
+ 
