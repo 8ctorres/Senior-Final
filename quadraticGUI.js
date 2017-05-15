@@ -1,56 +1,32 @@
 const readline = require('readline');
-const calc = require('./script.js')
+const calc = require('./quadratic.js')
 
 let a = 0;
 let b = 0;
 let c = 0;
 
-
-a = geta();
-b = getb();
-c = getc();
-
-function geta(){
-    let quadratica = readline.createInterface({
+function getNumbers(){
+    let quadratic = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
-        quadratica.question("What is your 'a' value?", function(str){
-          return str;
-          console.log("function a")
+        quadratic.question("What is your 'a' value? ", function(str){
+          a = str;
+          quadratic.question("What is your 'b' value? ", function(str){
+            b = str;
+            quadratic.question("What is your 'c' value? ", function(str){
+             c = str;
+
+             let x1 = calc.equation1(a,b,c);
+             let x2 = calc.equation2(a,b,c);
+
+             console.log("\n X equals "+x1+" and "+x2+"\n")
+
+             quadratic.close();
+             });
+          });
         });
-      };
-
-function getb(){
-          let quadraticb = readline.createInterface({
-              input: process.stdin,
-              output: process.stdout
-          });
-
-              quadraticb.question("What is your 'a' value?", function(str){
-                return str;
-          console.log("function b")
-              });
-            };
-
-function getc(){
-      let quadraticc = readline.createInterface({
-                input: process.stdin,
-                output: process.stdout
-          });
-
-          quadraticc.question("What is your 'a' value?", function(str){
-            return str;
-                      console.log("function c")
-
-          });
-      };
-
-function calculate(a,b,c){
-      let x1 = calc.equation1(a,b,c);
-      let x2 = calc.equation2(a,b,c);
-
-      console.log("X equals "+x1+" and "+x2+" .");
 }
- calculate(a,b,c);
+
+getNumbers();
