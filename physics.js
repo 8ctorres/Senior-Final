@@ -29,3 +29,18 @@ exports.force_acceleration = function(f,m){
   let a = f/m;
   return "Acceleration = "+a+" meters/second square;"
 }
+
+exports.momentum_momentum = function(m,v){
+  let p = m*v;
+  return "Momentum = "+p
+}
+
+exports.momentum_mass = function(p,v){
+  let m = p/v;
+  return "Mass = "+m+" kilograms"
+}
+
+exports.momentum_velocity = function (p,m){
+  let v = p/m;
+  return "Velocity = "+p+" m/s"
+}
