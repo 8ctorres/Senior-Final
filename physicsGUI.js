@@ -30,9 +30,8 @@ function getInput(){
                       let v = str;
                         physics.question("Is there any acceleration? ", function(str){
                           if (str.toLowerCase()=="n" || str.toLowerCase()=="no") {
-                            console.log("faulty and dont know why");
-                            console.log("KILL ME NOW!!")
-                            console.log(equations.motion_distance(v,t));
+                            let a = 0;
+                            console.log(equations.motion_distance(t,v,a));
                             physics.close();
                           }
                           else if (str.toLowerCase()=="yes" || str.toLowerCase()=="y"){
