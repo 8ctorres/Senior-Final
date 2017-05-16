@@ -3,7 +3,6 @@ var exports = module.exports = {};
 exports.motion_distance = function(t,v){
   let d = 0;
   d = t*v;
-  console.log("I AM INSIDE OF THE CALCULATING FUNCTION");
   return "D equals "+d;
 }
 
