@@ -1,19 +1,22 @@
 var exports = module.exports = {};
 
 exports.motion_distance = function(t,v){
-  let d = v*t;
-  return "Distance = "+d+" meters"
+  let d = 0;
+  d += t*v;
+  console.log("d = "+d);
+  return "Distance = "+d+" meters";
 }
 
 exports.motion_distance = function(t,v,a){
-  let d = v*t;
+  let d = 0;
+  d += v*t;
   d = d + 0.5*a*t*t;
-  return "Distance = "+d+" meters"
+  return "Distance = "+d+" meters";
 }
 
 exports.motion_velocity = function(t,d){
   let v = d/t;
-  return "Velocity = "+v+" m/s"
+  return "Velocity = "+v+" m/s";
 }
 
 exports.motion_velocity = function(t,d,a){

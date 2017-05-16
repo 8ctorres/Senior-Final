@@ -21,7 +21,6 @@ function getInput(){
     });
 
         physics.question("What type of problem do you want to solve? ", function(str){
-
           if (str.toLowerCase()=="motion") {
             physics.question("What is your unknown value? ", function(str){
               if (str.toLowerCase()=="distance") {
@@ -31,7 +30,9 @@ function getInput(){
                       let v = str;
                         physics.question("Is there any acceleration? ", function(str){
                           if (str.toLowerCase()=="n" || str.toLowerCase()=="no") {
-                            console.log(equations.motion_distance(t,v));
+                            console.log("faulty and dont know why");
+                            equations.motion_distance(v,t);
+                            console.log(equations.motion_distance(v,t));
                             physics.close();
                           }
                           else if (str.toLowerCase()=="yes" || str.toLowerCase()=="y"){
