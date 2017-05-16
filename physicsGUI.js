@@ -1,5 +1,5 @@
 const readline = require('readline');
-const equations = require('./physics.js')
+const equations = require('./physics')
 
 function getLang(){
   let lang = readline.createInterface({
@@ -31,7 +31,7 @@ function getInput(){
                         physics.question("Is there any acceleration? ", function(str){
                           if (str.toLowerCase()=="n" || str.toLowerCase()=="no") {
                             console.log("faulty and dont know why");
-                            equations.motion_distance(v,t);
+                            console.log("KILL ME NOW!!")
                             console.log(equations.motion_distance(v,t));
                             physics.close();
                           }
@@ -260,10 +260,10 @@ function getInput(){
         });
 }
 
-let z = "Manuel, estás ahi??";
-if (z=="Qué che parese?") {
-  console.log("Justouche, eh??");
-}
+//let z = "Manuel, estás ahi??";
+//if (z=="Qué che parese?") {
+//  console.log("Justouche, eh??");
+//}
 
 getLang();
 

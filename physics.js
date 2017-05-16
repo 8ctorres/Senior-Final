@@ -2,14 +2,14 @@ var exports = module.exports = {};
 
 exports.motion_distance = function(t,v){
   let d = 0;
-  d += t*v;
-  console.log("d = "+d);
-  return "Distance = "+d+" meters";
+  d = t*v;
+  console.log("I AM INSIDE OF THE CALCULATING FUNCTION");
+  return "D equals "+d;
 }
 
 exports.motion_distance = function(t,v,a){
   let d = 0;
-  d += v*t;
+  d = v*t;
   d = d + 0.5*a*t*t;
   return "Distance = "+d+" meters";
 }
