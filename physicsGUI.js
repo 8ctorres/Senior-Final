@@ -265,3 +265,5 @@ if (z=="Qué che parese?") {
 }
 
 getLang();
+
+//github 8ctorres

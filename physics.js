@@ -117,3 +117,4 @@ exports.typeofproblem = function(){
     return "Qué tipo de problema qués resolver? "
   }
 }
+ //github 8ctorres
