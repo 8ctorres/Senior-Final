@@ -165,19 +165,11 @@ function getInput(){
           else if (str.toLowerCase()=="momentum") {
             physics.question("What is your unknown value? ", function(str){
               if (str.toLowerCase()=="momentum") {
-
                 physics.question("What is your mass in kilograms? ", function(str){
                   let m = str;
                   physics.question("What is your initial speed in m/s? ", function(str){
                     let vi = str;
                     physics.question("What is your final speed in m/s? ", function(str){
-
-                physics.question("What is your mass in kilograms? ",function(str){
-                  let m = str;
-                  physics.question("What is your initial velocity in m/s? ", function(str){
-                    let vi = str;
-                    physics.question("What is your final velocity in m/s? ", function(str){
-
                       let vf = str;
                       let v = vf-vi;
                       console.log(equations.momentum_momentum(m,v));
@@ -187,11 +179,7 @@ function getInput(){
                 });
               }
               else if (str.toLowerCase()=="mass") {
-
                 physics.question("What is your momentum? ",function(str){
-
-                physics.question("What is your momentum? ", function(str){
-
                   let p = str;
                   physics.question("What is your initial speed in m/s? ", function(str){
                     let vi = str;
@@ -204,17 +192,10 @@ function getInput(){
                   });
                 });
               }
-
               else if (str.toLowerCase()=="speed" || str.toLowerCase()=="velocity") {
                 physics.question("What is your momentum? ",function(str){
                   let p = str;
                   physics.question("What your mass in kilograms? ", function(str){
-
-              else if (str.toLowerCase()=="velocity" || str.toLowerCase()=="speed") {
-                physics.question("What is your momentum? ", function(str){
-                  let p = str;
-                  physics.question("What is your mass in kilograms? ", function(str){
-
                     let m = str;
                     console.log(equations.momentum_velocity(p,m));
                     physics.close();
@@ -224,7 +205,6 @@ function getInput(){
               else {
                 console.log("Value not recognized. Please try again");
                 physics.close();
-
                 getInput();
               }
             });
@@ -241,27 +221,10 @@ function getInput(){
                     let v = str;
                     console.log(equations.energy_energy(m,v));
                     physics.close();
-
-              }
-            });
-          }
-          else if (str.toLowerCase()=="kinetic energy" || str.toLowerCase()=="energy") {
-            if (str.toLowerCase()=="energy") {
-              console.log("ATTENTION. This problem solves for KINETIC ENERGY only")
-            }
-            physics.equation("What is your unknown value? ", function(str){
-              if (str.toLowerCase()=="energy") {
-                physics.question("What is your mass in kilograms? ",function(str){
-                  let m = str;
-                  physics.question("What is your velocity? ", function(str) {
-                    let v = str;
-                    console.log(equations.energy_energy(m,v));
-
                   });
                 });
               }
               else if (str.toLowerCase()=="mass") {
-
                 physics.question("What is your KINETIC energy in joules? ", function(str){
                   let ec = str;
                   physics.question("What is your velocity in m/s? ", function(str){
@@ -280,20 +243,11 @@ function getInput(){
                     physics.close();
                   });
                 });
-
-
-              }
-              else if (str.toLowerCase()=="speed" || str.toLowerCase()=="velocity") {
-
-
               }
               else {
                 console.log("Value not recognized. Please try again");
                 physics.close();
-
                 getInput();
-
-
               }
             });
           }
