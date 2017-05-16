@@ -106,17 +106,14 @@ exports.selectlanguage = function(str){
   }
 }
 
-exports.momentum_momentum = function(m,v){
-  let p = m*v;
-  return "Momentum = "+p
-}
-
-exports.momentum_mass = function(p,v){
-  let m = p/v;
-  return "Mass = "+m+" kilograms"
-}
-
-exports.momentum_velocity = function (p,m){
-  let v = p/m;
-  return "Velocity = "+p+" m/s"
+exports.typeofproblem = function(){
+  if (lang=="eng") {
+    return "What type of problem do you want to solve? "
+  }
+  else if (lang=="esp") {
+    return "¿Qué tipo de problema quieres resolver? "
+  }
+  else if (lang=="gal") {
+    return "Qué tipo de problema qués resolver? "
+  }
 }
